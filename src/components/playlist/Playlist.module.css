@@ -1,0 +1,7 @@
+.playlist{
+    border-radius: 8px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0 0 24px;
+    /*overflow: hidden;*/
+    width: 100%;
+    /*background-color: red;*/
+}

@@ -1,0 +1,197 @@
+.container{
+    display: flex;
+    width: 100%;
+    position: relative;
+    gap: 24px;
+    border: 1px solid #dedede;
+    border-radius: 8px;
+    padding: 24px;
+}
+
+.playImg{
+    width: 56px;
+    height: 56px;
+    min-width: 56px;
+    min-height: 56px;
+    box-sizing: border-box;
+    /*padding: 5px;*/
+    line-height: 0;
+    position: relative;
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+}
+
+.accordionContainer{
+    flex: 1 1 0;
+    display: flex;
+    flex-direction: column;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+}
+
+.dateTime{
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    flex-direction: column;
+    text-align: right;
+}
+
+.title{
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+    margin-block: 0;
+    font-size: 1.125rem;
+    font-weight: 700;
+    padding-block-end: 4px;
+    color: #000000;
+}
+
+.cut-title-text {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    width: 500px;
+    white-space: nowrap;
+}
+
+.accordionWrapper{
+    box-sizing: border-box;
+    white-space: pre-wrap;
+}
+
+.accordionData{
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: none;
+    overflow: hidden;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+    margin-block: 0;
+    font-size: 0.8125rem;
+    font-weight: 400;
+    color: #6a6a6a;
+}
+
+.expand{
+    /*display: block;*/
+    margin-top: 8px;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+    font-size: 0.8125rem;
+    font-weight: 700;
+    background-color: transparent;
+    border: 0;
+    border-radius: 500px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    text-transform: none;
+    touch-action: manipulation;
+    transition-duration: 33ms;
+    transition-property: background-color, border-color, color, box-shadow, filter, transform;
+    user-select: none;
+    vertical-align: middle;
+    transform: translate3d(0px, 0px, 0px);
+    color: #000000;
+    min-inline-size: 0;
+    padding: 0;
+    padding-inline: 0;
+    display: inline-flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    position: relative;
+}
+
+.line-expanded{
+    -webkit-line-clamp: none;
+}
+
+.line-not-expanded{
+    -webkit-line-clamp: 2;
+}
+
+.dateTimeSpan{
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+    margin-block: 0;
+    font-size: 0.8125rem;
+    font-weight: 400;
+    color: #6a6a6a;
+}
+
+.playImgIcon{
+    width: 100%;
+    border-radius: 4px;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.playButtonContainer{
+    position: relative;
+}
+
+.playCircle{
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+    font-size: 0.8125rem;
+    font-weight: 700;
+    background-color: transparent;
+    border: 0;
+    border-radius: 500px;
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    text-transform: none;
+    touch-action: manipulation;
+    transition-duration: 33ms;
+    transition-property: background-color, border-color, color, box-shadow, filter, transform;
+    user-select: none;
+    vertical-align: middle;
+    transform: translate3d(0px, 0px, 0px);
+    padding: 0;
+    min-inline-size: 0;
+    align-self: center;
+}
+
+.playCircleButton{
+    display: flex;
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    /*background-color: red;*/
+}
+
+.playWrapper{
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+    position: relative;
+    background-color: #ffffff;
+    color: #000000;
+    display: flex;
+    border-radius: 500px;
+    font-size: inherit;
+    min-block-size: 32px;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    inline-size: 32px;
+    block-size: 32px;
+}
+
+.playWrapper:hover{
+    border-radius: 10px;
+}
+
+.is-playing{
+    @apply bg-gray-200
+}

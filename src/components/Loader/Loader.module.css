@@ -1,0 +1,7 @@
+.spinner{
+    @apply rounded-full animate-spin border-solid border-gray-700 border-t-gray-300 w-12 h-12 border-[4px] border-t-[4px];
+}
+
+.spinnerContainer{
+    @apply fixed inset-0 z-50 flex items-center justify-center
+}

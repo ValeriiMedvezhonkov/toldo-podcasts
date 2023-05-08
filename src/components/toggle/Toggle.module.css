@@ -1,0 +1,33 @@
+.toggleContainer{
+    display: flex;
+    margin-right: 1rem;
+    align-items: center;
+    cursor: pointer;
+    user-select: none;
+}
+
+.toggleInnerContainer{
+    display: block;
+    background-color: #6B7280;
+    width: 3rem;
+    height: 1.5rem;
+    border-radius: 9999px;
+}
+
+.dot{
+    position: absolute;
+    top: 0.25rem;
+    left: 0.25rem;
+    background-color: #ffffff;
+    transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform;
+    width: 1rem;
+    height: 1rem;
+    border-radius: 9999px;
+}
+
+.text{
+    color: #374151;
+    font-weight: 600;
+    font-size: 18px;
+    margin-left: 10px;
+}

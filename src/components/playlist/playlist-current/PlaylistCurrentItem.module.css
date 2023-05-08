@@ -1,0 +1,218 @@
+:root{
+    --range-progress: 0;
+}
+
+.playlistMain{
+    background: rgb(255, 255, 255);
+    display: flex;
+    max-height: 161px;
+    border-radius: 10px;
+}
+
+.plMain{
+    flex: 1 1 0;
+    position: relative;
+}
+
+.plMainData {
+    display: grid;
+    height: 100%;
+    grid-template-rows: 1fr repeat(3, max-content);
+    grid-template-columns: 1fr max-content;
+    grid-template-areas:
+        "title title logo"
+        "byline byline byline"
+        "play support share"
+        "ellapsed . duration";
+    grid-column-gap: 8px;
+    grid-row-gap: 8px;
+    padding: 16px;
+    border-radius: 0 10px 0 0;
+}
+
+.currentPlayImage{
+    width: 161px;
+    height: 161px;
+    border-radius: 10px 0 0 0;
+}
+
+.audioBar{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 8px;
+    display: flex;
+}
+
+.logo{
+    grid-area: logo / logo / logo / logo;
+    font-size: 0;
+    text-align: right;
+}
+
+.logoButton{
+    margin-top: 12px;
+    margin-right: 4px;
+    width: 11px;
+    height: 11px;
+    position: absolute;
+    right: 12px;
+    top: 12px;
+}
+
+.title{
+    grid-area: title / title / title / title;
+    font-size: 0;
+}
+
+.cut-title-text {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    width: 450px;
+    white-space: nowrap;
+}
+
+.titleType{
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+    margin-block: 0;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: inherit;
+}
+
+.byline{
+    grid-area: byline / byline / byline / byline;
+    font-size: 0;
+}
+
+.bylineType{
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+    margin-block: 0;
+    font-size: 0.8125rem;
+    font-weight: 400;
+    padding-block-end: 8px;
+    color: #6a6a6a;
+}
+
+@media (min-width: 768px){
+    .bylineType{
+        font-size: 0.875rem;
+    }
+}
+
+.middleDot::before {
+    content: " • ";
+}
+
+.playContainer{
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+    position: relative;
+    background-color: #9691ff;
+    color: #000000;
+    display: flex;
+    border-radius: 500px;
+    font-size: inherit;
+    min-block-size: 32px;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    inline-size: 32px;
+    block-size: 32px;
+}
+
+.play{
+    grid-area: play / play / play / play;
+    font-size: 0;
+}
+
+.playButton{
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+    font-size: 0.8125rem;
+    font-weight: 700;
+    background-color: transparent;
+    border: 0;
+    border-radius: 500px;
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    text-transform: none;
+    touch-action: manipulation;
+    transition-duration: 33ms;
+    transition-property: background-color, border-color, color, box-shadow, filter, transform;
+    user-select: none;
+    vertical-align: middle;
+    transform: translate3d(0px, 0px, 0px);
+    padding: 0;
+    min-inline-size: 0;
+    align-self: center;
+}
+
+.ellapsed{
+    grid-area: ellapsed / ellapsed / ellapsed / ellapsed;
+    font-size: 0;
+}
+
+.ellapsedType{
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+    margin-block: 0;
+    font-size: 0.6875rem;
+    font-weight: 400;
+    color: #6a6a6a;
+}
+
+.duration{
+    grid-area: duration / duration / duration / duration;
+    font-size: 0;
+    text-align: right;
+}
+
+.durationType{
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+    margin-block: 0;
+    font-size: 0.6875rem;
+    font-weight: 400;
+    color: #6a6a6a;
+}
+
+.progressBar{
+    -webkit-appearance: none;
+    background: transparent;
+    cursor: pointer;
+    width: 100%;
+}
+
+/***** Chrome, Safari, Opera, and Edge Chromium *****/
+.progressBar::-webkit-slider-runnable-track{
+    background: #dedede;
+    height: 0.5rem;
+}
+
+/******** Firefox ********/
+.progressBar::-moz-range-track {
+    background: #dedede;
+    height: 0.5rem;
+}
+
+.progressBar::-webkit-slider-thumb{
+    -webkit-appearance: none;
+}
+
+.progressBar::before{
+    content: '';
+    height: 100%;
+    background: #7b75ff;
+    width: var(--range-progress);
+    position: absolute;
+    top: 0;
+    left: 0;
+}

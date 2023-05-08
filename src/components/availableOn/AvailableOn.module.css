@@ -1,0 +1,22 @@
+.availableOn{
+    margin-bottom: 40px;
+}
+
+.availableOnTitle{
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+    margin-block: 0;
+    font-size: 1rem;
+    font-weight: 700;
+    padding-block-end: 16px;
+    color: inherit;
+}
+
+.availableOnButtons{
+    display: flex;
+    gap: 16px;
+}
+
+.availableImage{
+    cursor: pointer;
+}
