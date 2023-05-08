@@ -1,0 +1,24 @@
+<svg width="10.5" height="10.5">
+    <g transform="translate(0,10.5)">
+        <g transform="scale(1,-1)">
+            <rect x="0" y="0" width="2" height="3.5" fill="#6a6a6a">
+            </rect>
+            <rect
+                    x="4"
+                    y="0"
+                    width="2"
+                    height="3.5"
+                    fill="var(--text-subdued, #6a6a6a)"
+            >
+            </rect>
+            <rect
+                    x="8"
+                    y="0"
+                    width="2"
+                    height="3.5"
+                    fill="var(--text-subdued, #6a6a6a)"
+            >
+            </rect>
+        </g>
+    </g>
+</svg>
