@@ -92,13 +92,13 @@ const App = () => {
         <>
           {isLoading && <SpinnerContainer />}
           {!isLoading && feed && (
-            <>
+            <div>
               <HeaderCard title={feed?.title} />
               <div className={styles.playlistContainer}>
                 <AvailableOn availableOnItems={availableOnItems} />
                 <Playlist />
               </div>
-            </>
+            </div>
           )}
         </>
       </PageWrapper>

@@ -1,5 +1,9 @@
 .header {
-    padding: 56px 16px 40px;
+    @apply md:pt-14 pt-5 pb-10 md:px-4 px-4;
+}
+
+.container{
+    @apply flex md:flex-row flex-col md:gap-8 gap-4
 }
 
 img {
@@ -27,13 +31,14 @@ h1 {
 }
 
 .headerDescription {
-    margin-left: 40px;
+    /*margin-left: 1px;*/
 }
 
 .headerTitle {
-    font-weight: 800;
-    font-size: 2.5rem;
-    margin: 10px 0 24px;
+    /*font-weight: 800;*/
+    /*font-size: 2.5rem;*/
+    /*margin: 10px 0 24px;*/
+    @apply font-extrabold md:text-[2.5rem] mt-2.5 mb-6 mx-0 text-[1.5rem];
 }
 
 .headerBySme{

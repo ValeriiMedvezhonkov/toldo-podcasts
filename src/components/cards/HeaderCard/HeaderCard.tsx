@@ -20,7 +20,7 @@ const HeaderCard = ({ title }: HeaderCardProps) => {
           <ModalContent handleClose={handleClose} />
         </Modal>
       )}
-      <div className="flex">
+      <div className={styles.container}>
         <div>
           <img
             alt="Dobré ráno | Denný podcast denníka SME"

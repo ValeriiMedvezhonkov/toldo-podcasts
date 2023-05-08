@@ -28,27 +28,35 @@ const PlaylistItem = ({ item }: PlaylistItemProps) => {
           currentTrack?.id === item.id && currentTrack?.trackIsPlaying,
       })}
     >
-      <div className={styles.playImg}>
-        <img src={item?.image} alt="Play icon" className={styles.playImgIcon} />
-        <div className={styles.playButtonContainer}>
-          <button
-            aria-label="Play icon"
-            className={styles.playCircle}
-            onClick={() => handlePlayTrack(item)}
-          >
-            <span className={styles.playWrapper}>
-              <span aria-hidden="true" className={styles.playCircleButton}>
-                {currentTrack?.id === item.id &&
-                currentTrack?.trackIsPlaying ? (
-                  <PauseItem />
-                ) : (
-                  <PlayItem />
-                )}
+      <div style={{display: 'flex'}}>
+        <div className={styles.playImg}>
+          <img src={item?.image} alt="Play icon" className={styles.playImgIcon} />
+          <div className={styles.playButtonContainer}>
+            <button
+              aria-label="Play icon"
+              className={styles.playCircle}
+              onClick={() => handlePlayTrack(item)}
+            >
+              <span className={styles.playWrapper}>
+                <span aria-hidden="true" className={styles.playCircleButton}>
+                  {currentTrack?.id === item.id &&
+                  currentTrack?.trackIsPlaying ? (
+                    <PauseItem />
+                  ) : (
+                    <PlayItem />
+                  )}
+                </span>
               </span>
-            </span>
-          </button>
+            </button>
+          </div>
         </div>
-      </div>
+        <div className={classnames(styles.dateTime,styles.dateTimeResponsiveMobile)}>
+          <span className={styles.dateTimeSpan}>
+            {dayjs(item.pubDate).format("MMM DD, YYYY")}
+          </span>
+            <span className={styles.dateTimeSpan}>{item.duration}</span>
+          </div>
+        </div>
       <div className={styles.accordionContainer}>
         <h4 className={styles.title}>
           <div className={styles["cut-title-text"]}>{item.title}</div>
@@ -67,7 +75,7 @@ const PlaylistItem = ({ item }: PlaylistItemProps) => {
           </button>
         </div>
       </div>
-      <div className={styles.dateTime}>
+      <div className={classnames(styles.dateTime, styles.dateTimeResponsiveDesktop)}>
         <span className={styles.dateTimeSpan}>
           {dayjs(item.pubDate).format("MMM DD, YYYY")}
         </span>

@@ -1,11 +1,10 @@
 .container{
-    display: flex;
+    /*display: flex;*/
     width: 100%;
     position: relative;
-    gap: 24px;
     border: 1px solid #dedede;
     border-radius: 8px;
-    padding: 24px;
+    @apply md:p-6 p-2 md:gap-6 gap-2 flex md:flex-row flex-col;
 }
 
 .playImg{
@@ -40,6 +39,14 @@
     text-align: right;
 }
 
+.dateTimeResponsiveMobile{
+    @apply md:hidden flex grow
+}
+
+.dateTimeResponsiveDesktop{
+    @apply md:flex hidden
+}
+
 .title{
     box-sizing: border-box;
     -webkit-tap-highlight-color: transparent;
@@ -53,7 +60,7 @@
 .cut-title-text {
     text-overflow: ellipsis;
     overflow: hidden;
-    width: 500px;
+    max-width: 500px;
     white-space: nowrap;
 }
 
@@ -167,7 +174,6 @@
     position: absolute;
     top: 8px;
     left: 8px;
-    /*background-color: red;*/
 }
 
 .playWrapper{

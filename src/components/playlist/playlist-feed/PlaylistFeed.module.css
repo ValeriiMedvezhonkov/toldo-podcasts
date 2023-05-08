@@ -1,6 +1,6 @@
 .feed {
-    padding: 24px;
     display: flex;
     gap: 16px;
     flex-direction: column;
+    @apply md:p-6 p-2;
 }
